@@ -1,4 +1,9 @@
-# README
+# Ojo
+Url shortener App
+
+#### Main Objectives
+* Learn to use [Hotwire](https://hotwired.dev/)
+* Take a monolith and extract services to scale (for local use only, in the end everything will run in containers)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
