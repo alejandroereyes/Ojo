@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :urls
+
+  get '/m/:code', to: 'lookups#show', as: :lookups
+
+  root 'urls#new'
 end
