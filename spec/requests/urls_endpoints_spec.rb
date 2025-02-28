@@ -21,5 +21,5 @@ describe 'Urls Endpoints' do
       expect(url.original_url).to eq og_url
       expect(url.short_url).to be_present
     end
-  end   
+  end
 end
