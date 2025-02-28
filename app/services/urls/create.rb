@@ -1,6 +1,5 @@
 module Urls
   class Create
-
     attr_reader :url
 
     def initialize(url)

@@ -1,6 +1,4 @@
 class UrlsController < ApplicationController
-
-
   def index
     @urls = Url.all
   end
@@ -16,7 +14,7 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(create_params)
     Urls::Create.call(@url)
-    
+
     redirect_to root_path
   end
 
