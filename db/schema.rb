@@ -15,11 +15,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_27_221723) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "urls", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.text "short_url", null: false
+    t.text "short_code", null: false
     t.text "original_url", null: false
     t.datetime "expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["short_url"], name: "idx_urls_on_short_url", unique: true
+    t.index ["short_code"], name: "idx_urls_on_short_code", unique: true
   end
 end

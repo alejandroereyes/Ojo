@@ -14,7 +14,7 @@ module Urls
     def call
       next_i = Url.count + 1 # TODO: use redis's INCR instead of url count
 
-      url.short_url = ::Urls::Encode.bijective_encode(next_i)
+      url.short_code = ::Urls::Encode.bijective_encode(next_i)
       url.save!
       url
     end

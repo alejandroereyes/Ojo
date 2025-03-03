@@ -4,10 +4,10 @@ describe 'Lookups Endpoint' do
   describe 'show' do
     let(:og_url) { 'https://og_url.com' }
     let(:short_code) { 'a' }
-    let(:url) { Url.new(original_url: og_url, short_url: short_code) }
+    let(:url) { Url.new(original_url: og_url, short_code: short_code) }
 
     before do
-      allow(Url).to receive(:find_by).with(short_url: short_code).and_return(url)
+      allow(Url).to receive(:find_by).with(short_code: short_code).and_return(url)
     end
 
     it 'redirects to original url' do

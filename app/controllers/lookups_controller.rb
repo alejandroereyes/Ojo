@@ -12,6 +12,6 @@ class LookupsController < ApplicationController
   private
 
   def set_url
-    @url = Url.find_by(short_url: params[:short_code])
+    @url = Url.find_by(short_code: params[:short_code])
   end
 end
