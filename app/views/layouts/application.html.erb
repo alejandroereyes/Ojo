@@ -31,7 +31,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+      <%= render 'shared/nav_bar' %>
+      <main class="container mx-auto mt-28 px-5 flex">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>

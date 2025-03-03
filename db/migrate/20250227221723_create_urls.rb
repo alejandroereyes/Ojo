@@ -7,7 +7,7 @@ class CreateUrls < ActiveRecord::Migration[8.0]
 
       t.timestamps
 
-      t.index ["short_code"], name: 'idx_urls_on_short_code', unique: true
+      t.index ["short_code"], unique: true
     end
   end
 end
