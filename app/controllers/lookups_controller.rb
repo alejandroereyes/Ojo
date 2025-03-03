@@ -1,7 +1,17 @@
 class LookupsController < ApplicationController
-  def show
-    url = Url.find_by(short_url: params[:code])
+  before_action :set_url
 
-    redirect_to url.original_url, allow_other_host: true
+  def show
+    respond_to do |format|
+      format.html do
+        redirect_to @url.original_url, allow_other_host: true
+      end
+    end
+  end
+
+  private
+
+  def set_url
+    @url = Url.find_by(short_url: params[:short_code])
   end
 end

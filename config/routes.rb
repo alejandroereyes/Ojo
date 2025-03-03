@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :urls
 
-  get '/m/:code', to: 'lookups#show', as: :lookups
+  get '/m/:short_code', to: 'lookups#show', as: :lookups
 
   root 'urls#new'
 end

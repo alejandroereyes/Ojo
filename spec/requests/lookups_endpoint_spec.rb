@@ -13,6 +13,7 @@ describe 'Lookups Endpoint' do
     it 'redirects to original url' do
       get "/m/#{short_code}"
 
+      expect(response).to have_http_status(302)
       expect(response).to redirect_to(og_url)
     end
   end
