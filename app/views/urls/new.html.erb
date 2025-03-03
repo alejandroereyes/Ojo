@@ -1,14 +1,14 @@
-<div class='space-y-12 flex gap-8'>
-	<%= form_with model: @url do |f| %>
-		<%= f.label :original_url %>
+<div class='flex flex-col gap-10'>
+	<div class='space-y-12 flex gap-8'>
+		<%= form_with model: @url do |f| %>
 			<%= f.text_field :original_url, placeholder: 'Enter your url' %>
-	
-			<button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"> 
-				<%= f.submit 'Create little URL-el-le' %>
-			</button>
-	<% end %>
-</div>
+		<button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"> 
+			<%= f.submit 'Create little URL-el-le' %>
+		</button>
+		<% end %>
+	</div>
 
-<div class='space-y-12 flex'>
-    <turbo-frame id='urls' src='/urls' />
+	<div class='space-y-12 flex'>
+		<turbo-frame id='urls' src='/urls' />
+	</div>
 </div>
